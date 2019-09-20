@@ -6,7 +6,7 @@ class TicTacToe
 
   def initialize(board = nil)
     @board = board || Array.new(9, " ")
-    @TicTacToe = play
+
   end
   
   # The "pipes" || = or. This is saying that if the board returns nil, return an empty array.  So, either display the current board, or a new one.

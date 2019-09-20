@@ -1,10 +1,6 @@
-#!/usr/bin/env ruby
-#require 'pry'
-#require_relative '../lib/tic_tac_toe.rb'
-
-bin/tictactoe
+!/usr/bin/env ruby
 require 'pry'
 require_relative '../lib/tic_tac_toe.rb'
-
 game = TicTacToe.new
-game.play
+game.play 
+#.play calls the play method on the game instance
