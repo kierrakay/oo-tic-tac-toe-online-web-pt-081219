@@ -1,9 +1,12 @@
+
 require 'pry'
+
 
 class TicTacToe
 
   def initialize(board = nil)
     @board = board || Array.new(9, " ")
+    @TicTacToe = play
   end
   
   # The "pipes" || = or. This is saying that if the board returns nil, return an empty array.  So, either display the current board, or a new one.
@@ -134,11 +137,25 @@ def winner # tells if "X" or "O" won. very similar to  def won? method.
       return "X"
     elsif (@board[win_combo[0]]) == "O" && (@board[win_combo[1]]) == "O" && (@board[win_combo[2]]) == "O"
       return "O"
-    end
+    else
       nil
     end
   end
+end
+
+#play
+def play 
+  while over? == false
+    turn
+  end
+  if won?
+    puts "Congratulations #{winner}!"
+  elsif draw?
+    puts "Cat's Game!"
+  end
+end
 
 
+end
 
 
